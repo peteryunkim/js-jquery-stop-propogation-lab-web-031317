@@ -13,15 +13,18 @@ function lightActive(){
       $(this).toggleClass("active");
       console.log("background purple");
   });
-  $('.light .redLight').on('click', function(event){
-    event.stopPropagation();
-  });
-  $('.light .yellowLight').on('click', function(event){
-    event.stopPropagation();
-  });
-  $('.light .greenLight').on('click', function(event){
+  $('.light').find('span').on('click', function(event){
     event.stopPropagation();
   })
+  // $('.light .redLight').on('click', function(event){
+  //   event.stopPropagation();
+  // });
+  // $('.light .yellowLight').on('click', function(event){
+  //   event.stopPropagation();
+  // });
+  // $('.light .greenLight').on('click', function(event){
+  //   event.stopPropagation();
+  // })
 }
 
 function redLight(){
