@@ -5,14 +5,23 @@ $(document).ready(function() {
   yellowLight();
   greenLight();
 
-  
+
 });
 
 function lightActive(){
   $('.light').on('click', function(){
       $(this).toggleClass("active");
-      console.log("background purple")
+      console.log("background purple");
   });
+  $('.light .redLight').on('click', function(event){
+    event.stopPropagation();
+  });
+  $('.light .yellowLight').on('click', function(event){
+    event.stopPropagation();
+  });
+  $('.light .greenLight').on('click', function(event){
+    event.stopPropagation();
+  })
 }
 
 function redLight(){
@@ -33,4 +42,3 @@ function greenLight(){
     $(this).toggleClass("green");
   });
 }
-
